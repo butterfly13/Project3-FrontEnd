@@ -5,12 +5,26 @@ class ShowListAll extends Component {
   render() {
     console.log(this.props);
     let entries = this.props.entries.map(entry => {
-      return (
-        <li>
-          <Link to={`/entry/${entry.weekNumber}`}>Week {entry.weekNumber}</Link>
-          <h3>{entry.content}</h3>
-        </li>
-      );
+      if (this.props.admin) {
+        return (
+          <li>
+            <Link to={`/entry/${entry.weekNumber}`}>
+              Week {entry.weekNumber}
+            </Link>
+            <h3>{entry.content}</h3>
+            <button type="submit">Delete</button>
+          </li>
+        );
+      } else {
+        return (
+          <li>
+            <Link to={`/entry/${entry.weekNumber}`}>
+              Week {entry.weekNumber}
+            </Link>
+            <h3>{entry.content}</h3>
+          </li>
+        );
+      }
     });
     return (
       <div>

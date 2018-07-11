@@ -1,10 +1,21 @@
-import React, { Component } from 'react';
-
+import React, { Component } from "react";
+import { Redirect } from "react-router-dom";
 class ShowAdmin extends Component {
+  redirectToTarget = () => {
+    this.props.history.push(`/entry`);
+  };
+  onClick = e => {
+    this.props.onClickAdmin(e);
+    this.redirectToTarget();
+  };
   render() {
     return (
       <div>
-        <h1>ShowAdmin</h1>
+        <input
+          onClick={this.onClick}
+          type="button"
+          value="Swear You Are An Admin"
+        />
       </div>
     );
   }

@@ -25,7 +25,16 @@ class ShowListWeek extends Component {
   };
   render() {
     let week = this.state.weekEntries.map(entry => {
-      return <div>{entry.content}</div>;
+      if (this.props.admin) {
+        return (
+          <div>
+            {entry.content}
+            <button type="submit">Delete</button>
+          </div>
+        );
+      } else {
+        return <div>{entry.content}</div>;
+      }
     });
     return (
       <div>

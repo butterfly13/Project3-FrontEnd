@@ -14,7 +14,8 @@ class App extends Component {
     super();
     this.state = {
       entries: [],
-      topic: []
+      topic: [],
+      admin: null
     };
 
     if (window.location.origin === "http://localhost:3000") {
@@ -23,12 +24,16 @@ class App extends Component {
       this.origin = "https://murmuring-badlands-90875.herokuapp.com";
     }
   }
+  onClickAdmin = e => {
+    e.preventDefault();
+    this.state.admin = true;
+    console.log(this.state.admin);
+  };
   getEntries = () => {
     axios
       .get(`${this.origin}/entry`)
       .then(results => {
         this.setState({ entries: results.data });
-        console.log(results.data);
       })
       .catch(err => {
         console.log(err);
@@ -37,28 +42,25 @@ class App extends Component {
   componentDidMount() {
     this.getEntries();
     this.getLunchTopic();
+    console.log(this.state.admin);
   }
   getLunchTopic = () => {
     axios
       .get(`${this.origin}`)
       .then(results => {
         this.setState({ topic: results.data });
-        console.log(results.data);
       })
       .catch(err => {
         console.log(err);
       });
   };
   render() {
-    console.log(this.state);
-
     return (
       <div className="App">
         <header>
           <h1>TITLE PAGE</h1>
           <nav>
             <Link to="/entry">All</Link>
-            <Link to="/entry/:weekNumber">By week</Link>
             <Link to="/newEntry">Add New Entry</Link>
           </nav>
         </header>
@@ -70,6 +72,7 @@ class App extends Component {
               return (
                 <ShowListAll
                   entries={this.state.entries}
+                  admin={this.state.admin}
                   getEntries={this.getEntries}
                   {...routerParams}
                 />
@@ -83,6 +86,7 @@ class App extends Component {
               return (
                 <ShowListWeek
                   entries={this.state.entries}
+                  admin={this.state.admin}
                   getEntries={this.getEntries}
                   {...routerParams}
                 />
@@ -112,6 +116,14 @@ class App extends Component {
                   getLunchTopic={this.getLunchTopic}
                   {...routerParams}
                 />
+              );
+            }}
+          />
+          <Route
+            path="/5b463c0cd3af23f8ef66d953"
+            render={routerParams => {
+              return (
+                <ShowAdmin onClickAdmin={this.onClickAdmin} {...routerParams} />
               );
             }}
           />
