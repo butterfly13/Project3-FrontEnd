@@ -12,7 +12,7 @@ class LunchTopic extends Component {
     let topic = topics[Math.floor(Math.random() * topics.length)];
     return (
       <div>
-        <h1>{topic}</h1>
+        <h6>Suggested Lunch Topic: {topic}</h6>
       </div>
     );
   }

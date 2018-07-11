@@ -50,30 +50,19 @@ class App extends Component {
       });
   };
   render() {
+    console.log(this.state);
+
     return (
       <div className="App">
         <header>
           <h1>TITLE PAGE</h1>
           <nav>
-            <Link to="/">Random</Link>
             <Link to="/entry">All</Link>
-            <Link to="/entry/:week">By week</Link>
+            <Link to="/entry/:weekNumber">By week</Link>
             <Link to="/newEntry">Add New Entry</Link>
           </nav>
         </header>
         <main>
-          <Route
-            path="/"
-            render={routerParams => {
-              return (
-                <LunchTopic
-                  topic={this.state.topic}
-                  getLunchTopic={this.getLunchTopic}
-                  {...routerParams}
-                />
-              );
-            }}
-          />
           <Route
             path="/entry"
             exact
@@ -87,7 +76,19 @@ class App extends Component {
               );
             }}
           />
-          <Route path="/entry/:week" component={ShowListWeek} />
+          <Route
+            path="/entry/:weekNumber"
+            exact
+            render={routerParams => {
+              return (
+                <ShowListWeek
+                  entries={this.state.entries}
+                  getEntries={this.getEntries}
+                  {...routerParams}
+                />
+              );
+            }}
+          />
           <Route
             path="/"
             exact
