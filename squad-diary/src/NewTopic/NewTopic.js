@@ -39,6 +39,13 @@ class NewTopic extends Component {
         })
         .catch(err => console.log(err))
         // console.log(newLunchTopic)
+
+        // to clear out the input form after the user hits submit
+       this.setState({
+        newLunchTopic: '',
+        newEntry: '',
+        weekNumber: null
+       })
     }
 
     handleNewEntry (){
@@ -50,13 +57,21 @@ class NewTopic extends Component {
             console.log(res)
             console.log(res.data)
         })
+        // to clear out the input form after the user hits submit
+       this.setState({
+        newLunchTopic: '',
+        newEntry: '',
+        weekNumber: null
+       })
     }
+
+    
 
     handleSubmit (e) {
         e.preventDefault()
        this.handleNewTopic()
        this.handleNewEntry()
-
+       this.props.history.push('/entry')
        
     }
     render() {
