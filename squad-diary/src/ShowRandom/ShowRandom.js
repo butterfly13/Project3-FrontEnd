@@ -13,7 +13,7 @@ class ShowRandom extends Component {
         </div>
       );
     });
-    console.log(this.props.entries);
+
     return (
       <div>
         <h1 />

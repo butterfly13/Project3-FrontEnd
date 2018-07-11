@@ -15,7 +15,7 @@ class App extends Component {
     this.state = {
       entries: [],
       topic: [],
-      admin: null
+      admin: true
     };
 
     if (window.location.origin === "http://localhost:3000") {
@@ -27,7 +27,6 @@ class App extends Component {
   onClickAdmin = e => {
     e.preventDefault();
     this.state.admin = true;
-    console.log(this.state.admin);
   };
   getEntries = () => {
     axios
@@ -39,10 +38,19 @@ class App extends Component {
         console.log(err);
       });
   };
+  // deleteEntry = () => {
+  //   axios
+  //     .delete(`${this.origin}/entry/${this.state.entries._id}`)
+  //     .then(() => {
+  //       this.getEntries();
+  //     })
+  //     .catch(err => {
+  //       console.log(err);
+  //     });
+  // };
   componentDidMount() {
     this.getEntries();
     this.getLunchTopic();
-    console.log(this.state.admin);
   }
   getLunchTopic = () => {
     axios
@@ -74,6 +82,7 @@ class App extends Component {
                   entries={this.state.entries}
                   admin={this.state.admin}
                   getEntries={this.getEntries}
+                  deleteEntry={this.deleteEntry}
                   {...routerParams}
                 />
               );
@@ -88,6 +97,7 @@ class App extends Component {
                   entries={this.state.entries}
                   admin={this.state.admin}
                   getEntries={this.getEntries}
+                  deleteEntry={this.deleteEntry}
                   {...routerParams}
                 />
               );

@@ -6,9 +6,7 @@ class LunchTopic extends Component {
   };
 
   render() {
-    console.log(this.props.topic);
     let topics = this.props.topic.map(topics => topics.content);
-    console.log(topics);
     let topic = topics[Math.floor(Math.random() * topics.length)];
     return (
       <div>
