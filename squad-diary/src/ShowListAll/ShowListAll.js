@@ -2,24 +2,20 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 class ShowListAll extends Component {
-  componentDidMount() {
-    this.props.getEntries();
-  }
   render() {
     let entries = this.props.entries.map(entry => {
       return (
-        <div>
-          <h2>
-            Week <Link to={`/entry/${entry._id}`}>{entry.weekNumber}</Link>
-          </h2>
+        <li>
+          <Link to={`/entry/week${entry.weekNumber}`}>
+            Week {entry.weekNumber}
+          </Link>
           <h3>{entry.content}</h3>
-        </div>
+        </li>
       );
     });
-    console.log(entries);
     return (
       <div>
-        <h1>{entries}</h1>
+        <ul>{entries}</ul>
       </div>
     );
   }
