@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class ShowRandom extends Component {
+export default class ShowAdmin extends Component {
   render() {
     return <div />;
   }
