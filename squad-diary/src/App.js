@@ -59,8 +59,8 @@ class App extends Component {
         <main>
           <Switch>
             <Route
-              path='/'
-              component={ShowRandom}
+              path='/lunch'
+              component={LunchTopic}
             />
             <Route
               path='/list'
@@ -69,10 +69,10 @@ class App extends Component {
             <Route
               path='/week'
               component={ShowListWeek}
-            />
+            />     
             <Route
-              path='/lunch'
-              component={LunchTopic}
+              path='/'
+              component={ShowRandom}
             />
           </Switch>
         </main>
