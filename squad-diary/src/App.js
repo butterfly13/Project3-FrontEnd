@@ -12,7 +12,8 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      entries: []
+      entries: [],
+      topic: []
     };
 
     if (window.location.origin === "http://localhost:3000") {
@@ -23,7 +24,7 @@ class App extends Component {
   }
   getEntries = () => {
     axios
-      .get(`${this.origin}`)
+      .get(`${this.origin}/entry`)
       .then(results => {
         this.setState({ items: results.data });
         console.log(results.data);
@@ -34,8 +35,19 @@ class App extends Component {
   };
   componentDidMount() {
     this.getEntries();
+    this.getLunchTopic();
   }
-
+  getLunchTopic = () => {
+    axios
+      .get(`${this.origin}`)
+      .then(results => {
+        this.setState({ topic: results.data });
+        console.log(results.data);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
   render() {
     return (
       <div className="App">
@@ -43,16 +55,26 @@ class App extends Component {
           <h1>TITLE PAGE</h1>
           <nav>
             <Link to="/">Random</Link>
-            <Link to="/list">All</Link>
-            <Link to="/week">By week</Link>
-            <Link to="/lunch">Lunch Topics</Link>
+            <Link to="/entry">All</Link>
+            <Link to="/entry/:week">By week</Link>
           </nav>
         </header>
         <main>
           <Switch>
-            <Route path="/lunch" component={LunchTopic} />
-            <Route path="/list" component={ShowListAll} />
-            <Route path="/week" component={ShowListWeek} />
+            <Route
+              path="/"
+              render={routerParams => {
+                return (
+                  <LunchTopic
+                    topic={this.state.topic}
+                    getLunchTopic={this.getLunchTopic}
+                    {...routerParams}
+                  />
+                );
+              }}
+            />
+            <Route path="/entry" component={ShowListAll} />
+            <Route path="/entry/:week" component={ShowListWeek} />
             <Route path="/" component={ShowRandom} />
           </Switch>
         </main>
