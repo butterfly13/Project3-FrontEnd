@@ -1,7 +1,13 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-export default class ShowAdmin extends Component {
+class ShowAdmin extends Component {
   render() {
-    return <div />;
+    return (
+      <div>
+        <h1>ShowAdmin</h1>
+      </div>
+    );
   }
 }
+
+export default ShowAdmin;

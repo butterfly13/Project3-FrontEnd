@@ -1,7 +1,13 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-export default class ShowListAll extends Component {
+class ShowListAll extends Component {
   render() {
-    return <div />;
+    return (
+      <div>
+        <h1>ShowListAll</h1>
+      </div>
+    );
   }
 }
+
+export default ShowListAll;

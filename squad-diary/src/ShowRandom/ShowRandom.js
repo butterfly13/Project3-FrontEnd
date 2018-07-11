@@ -1,7 +1,13 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-export default class ShowRandom extends Component {
+class ShowRandom extends Component {
   render() {
-    return <div />;
+    return (
+      <div>
+        <h1>ShowRandom</h1>
+      </div>
+    );
   }
 }
+
+export default ShowRandom;
