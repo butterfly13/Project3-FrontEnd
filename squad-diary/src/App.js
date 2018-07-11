@@ -5,6 +5,7 @@ import ShowAdmin from "./ShowAdmin/ShowAdmin";
 import ShowListAll from "./ShowListAll/ShowListAll";
 import ShowListWeek from "./ShowListWeek/ShowListWeek";
 import ShowRandom from "./ShowRandom/ShowRandom";
+import NewTopic from "./NewTopic/NewTopic";
 import axios from "axios";
 import "./App.css";
 
@@ -57,6 +58,7 @@ class App extends Component {
             <Link to="/">Random</Link>
             <Link to="/entry">All</Link>
             <Link to="/entry/:week">By week</Link>
+            <Link to="/newEntry">Add New Entry</Link>
           </nav>
         </header>
         <main>
@@ -94,6 +96,19 @@ class App extends Component {
                 <ShowRandom
                   entries={this.state.entries}
                   getEntries={this.getEntries}
+                  {...routerParams}
+                />
+              );
+            }}
+          />
+          <Route path="/newEntry" component={NewTopic} />
+          <Route
+            path="/"
+            render={routerParams => {
+              return (
+                <LunchTopic
+                  topic={this.state.topic}
+                  getLunchTopic={this.getLunchTopic}
                   {...routerParams}
                 />
               );
