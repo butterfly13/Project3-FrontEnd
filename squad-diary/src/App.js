@@ -26,7 +26,7 @@ class App extends Component {
     axios
       .get(`${this.origin}/entry`)
       .then(results => {
-        this.setState({ items: results.data });
+        this.setState({ entries: results.data });
         console.log(results.data);
       })
       .catch(err => {
@@ -60,23 +60,45 @@ class App extends Component {
           </nav>
         </header>
         <main>
-          <Switch>
-            <Route
-              path="/"
-              render={routerParams => {
-                return (
-                  <LunchTopic
-                    topic={this.state.topic}
-                    getLunchTopic={this.getLunchTopic}
-                    {...routerParams}
-                  />
-                );
-              }}
-            />
-            <Route path="/entry" component={ShowListAll} />
-            <Route path="/entry/:week" component={ShowListWeek} />
-            <Route path="/" component={ShowRandom} />
-          </Switch>
+          <Route
+            path="/"
+            render={routerParams => {
+              return (
+                <LunchTopic
+                  topic={this.state.topic}
+                  getLunchTopic={this.getLunchTopic}
+                  {...routerParams}
+                />
+              );
+            }}
+          />
+          <Route
+            path="/entry"
+            exact
+            render={routerParams => {
+              return (
+                <ShowListAll
+                  entries={this.state.entries}
+                  getEntries={this.getEntries}
+                  {...routerParams}
+                />
+              );
+            }}
+          />
+          <Route path="/entry/:week" component={ShowListWeek} />
+          <Route
+            path="/"
+            exact
+            render={routerParams => {
+              return (
+                <ShowRandom
+                  entries={this.state.entries}
+                  getEntries={this.getEntries}
+                  {...routerParams}
+                />
+              );
+            }}
+          />
         </main>
       </div>
     );
