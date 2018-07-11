@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { Component } from 'react'
 import {Route, Link, Switch} from 'react-router-dom'
 import LunchTopic from './LunchTopic/LunchTopic'
@@ -6,14 +5,8 @@ import ShowAdmin from './ShowAdmin/ShowAdmin'
 import ShowListAll from './ShowListAll/ShowListAll'
 import ShowListWeek from './ShowListWeek/ShowListWeek'
 import ShowRandom from './ShowRandom/ShowRandom'
+import axios from "axios"
 import './App.css'
-
-class App extends Component {
-  render () {
-=======
-import React, { Component } from "react";
-import "./App.css";
-import axios from "axios";
 
 class App extends Component {
   constructor() {
@@ -44,7 +37,6 @@ class App extends Component {
   }
 
   render() {
->>>>>>> f9f47793a89a193c1771a6681d011ccc5ad9f977
     return (
       <div className='App'>
         <header>
