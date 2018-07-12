@@ -62,6 +62,7 @@ class App extends Component {
           <Logo />
           <Link to="/" className="navbar-brand">
             General Assembly
+            <img src="https://generalassemb.ly/"/>
           </Link>
           <button
             className="navbar-toggler"
