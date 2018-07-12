@@ -59,6 +59,7 @@ class App extends Component {
         <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
           <Link to="/entry" className="navbar-brand">
             General Assembly
+            <img src="https://generalassemb.ly/"/>
           </Link>
           <button
             className="navbar-toggler"
