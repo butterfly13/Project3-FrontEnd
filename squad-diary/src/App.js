@@ -87,7 +87,6 @@ class App extends Component {
             </ul>
           </div>
         </nav>
-        <h1>TITLE PAGE</h1>
 
         <main>
           <Route
