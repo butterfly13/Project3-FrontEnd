@@ -21,28 +21,32 @@ class ShowListAll extends Component {
               <div className="col-lg-2 col-md-2" />
               <div className="col-lg-8 col-md-8 col-sm-12">
                 <div className="card">
-                  <Link to={`/entry/${entry.weekNumber}`}>
-                    Week {entry.weekNumber}
-                  </Link>
+                  <div className="card-header">
+                    <Link to={`/entry/${entry.weekNumber}`}>
+                      Week {entry.weekNumber}
+                    </Link>
+                  </div>
                   <div className="card-body">
-                    <p className="card-text">{entry.content}</p>
-                    <button
-                      onClick={e => {
-                        e.preventDefault();
-                        axios
-                          .delete(`${this.origin}/entry/${entry._id}`)
-                          .then(() => {
-                            this.props.getEntries();
-                            this.redirectToTarget();
-                          })
-                          .catch(err => {
-                            console.log(err);
-                          });
-                      }}
-                      type="submit"
-                    >
-                      Delete
+                    <p className="card-text">"{entry.content}"</p>
+                    <div className="card-footer">
+                      <button
+                        onClick={e => {
+                          e.preventDefault();
+                          axios
+                            .delete(`${this.origin}/entry/${entry._id}`)
+                            .then(() => {
+                              this.props.getEntries();
+                              this.redirectToTarget();
+                            })
+                            .catch(err => {
+                              console.log(err);
+                            });
+                        }}
+                        type="submit"
+                      >
+                        Delete
                     </button>
+                    </div>
                   </div>
                 </div>
               </div>
