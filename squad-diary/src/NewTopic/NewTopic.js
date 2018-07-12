@@ -13,7 +13,7 @@ class NewTopic extends Component {
     if (window.location.origin === "http://localhost:3000") {
       this.origin = "http://localhost:4000";
     } else {
-      this.origin = "https://murmuring-badlands-90875.herokuapp.com";
+      this.origin = "https://boiling-dusk-74498.herokuapp.com";
     }
 
     this.handleChange = this.handleChange.bind(this);
@@ -27,7 +27,7 @@ class NewTopic extends Component {
   }
 
   handleNewTopic() {
-    if (this.state.newLunchTopic.length > 0) {
+    if (this.state.newLunchTopic.length > 3) {
       const newLunchTopic = {
         content: this.state.newLunchTopic
       };
@@ -41,9 +41,7 @@ class NewTopic extends Component {
     }
     // to clear out the input form after the user hits submit
     this.setState({
-      newLunchTopic: "",
-      newEntry: "",
-      weekNumber: null
+      newLunchTopic: ""
     });
   }
 
@@ -52,7 +50,7 @@ class NewTopic extends Component {
     if (
       this.state.weekNumber > 0 &&
       this.state.weekNumber < 13 &&
-      this.state.newEntry.length > 0
+      this.state.newEntry.length > 3
     ) {
       axios
         .post(`${this.origin}/entry`, {
@@ -65,7 +63,6 @@ class NewTopic extends Component {
     }
     // to clear out the input form after the user hits submit
     this.setState({
-      newLunchTopic: "",
       newEntry: "",
       weekNumber: null
     });
