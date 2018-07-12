@@ -1,7 +1,11 @@
 .card-body {
     text-align: center;
+    font-weight: bold;
+    
 }
 
 .card {
     margin: 20px;
+    background-color: #C4C9C9;
+    opacity: 0.85;
 }
