@@ -8,6 +8,7 @@ import ShowRandom from "./ShowRandom/ShowRandom";
 import NewTopic from "./NewTopic/NewTopic";
 import axios from "axios";
 import "./App.css";
+import Logo from "./Logo";
 
 class App extends Component {
   constructor() {
@@ -57,7 +58,8 @@ class App extends Component {
     return (
       <div className="container-fluid">
         <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-          <Link to="/entry" className="navbar-brand">
+          <Logo />
+          <Link to="/" className="navbar-brand">
             General Assembly
           </Link>
           <button
