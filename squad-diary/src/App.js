@@ -10,7 +10,6 @@ import axios from "axios";
 import "./App.css";
 import Logo from "./Logo";
 
-
 class App extends Component {
   constructor() {
     super();
