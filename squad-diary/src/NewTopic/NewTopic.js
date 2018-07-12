@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import './NewTopic.css'
 
 class NewTopic extends Component {
   constructor(props) {
@@ -80,8 +81,12 @@ class NewTopic extends Component {
   render() {
     return (
       <div className="container">
-           <h3>Add New Lunch Topic</h3>
-          <form>
+           <h3>Add New Entry and Lunch Topic</h3>
+           
+           <div className="row">
+           <div className="col-lg-2 col-md-2"></div>
+           <div className="col-lg-8 col-md-8 col-sm-12">
+          <form onSubmit={this.handleSubmit}>
                 <div className="form-group">
                     <label>Suggest Lunch Topic:</label>
                     <textarea 
@@ -89,10 +94,11 @@ class NewTopic extends Component {
                     value={this.state.value}
                     onChange={this.handleChange}
                     className="form-control"
+                   
                   />{" "}
                  
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                     <label>Share Your experience:</label>
                     <textarea
                         name="newEntry"
@@ -103,52 +109,23 @@ class NewTopic extends Component {
                     />{" "}
 
                 </div>
-                <div class="form-group">
-                        <label>WeekNumber:</label>
-                        {/* <input type="number" class="form-control" > */}
+                <div className="form-group">
+                        <label>WeekNumber (1 - 12):</label>
                         <input
                         type="number"
                         name="weekNumber"
                         value={this.state.value}
                         onChange={this.handleChange}
-                        class="form-control"
+                        className="form-control"
                         />{" "}
                 </div>
+                <button className="btn btn-lg btn-block btn-info">Add Entry / Topic</button>
 
 
             </form>
+            </div>
+            </div>
 
-
-        {/* Working content   */}
-        <div className="addTopic">
-          <h3>Add New Lunch Topic</h3>
-          <form onSubmit={this.handleSubmit}>
-            <label>Suggest Lunch Topic: </label>
-            <textarea
-              name="newLunchTopic"
-              value={this.state.value}
-              onChange={this.handleChange}
-            />{" "}
-            <br />
-            <label>Share Your experience:</label>
-            <textarea
-              name="newEntry"
-              value={this.state.value}
-              onChange={this.handleChange}
-              placeholder="Your recommendation, high, or low "
-            />{" "}
-            <br />
-            <label>WeekNumber: </label>
-            <input
-              type="number"
-              name="weekNumber"
-              value={this.state.value}
-              onChange={this.handleChange}
-            />{" "}
-            <br />
-            <button> Add Topic</button>
-          </form>
-        </div>
       </div>
     );
   }
