@@ -5,11 +5,15 @@ class ShowRandom extends Component {
     this.props.getEntries();
   }
   render() {
-    let entries = this.props.entries.map(entry => entry.content);
-
+    // let entries = this.props.entries.map(entry => entry.content);
+    let random = this.props.entries[
+      Math.floor(Math.random() * this.props.entries.length)
+    ];
     return (
       <div>
-        <h1 />
+        Week {random && random.weekNumber}
+        <br />
+        {random && random.content}
       </div>
     );
   }
