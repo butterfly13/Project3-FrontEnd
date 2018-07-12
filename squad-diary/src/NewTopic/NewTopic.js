@@ -16,7 +16,6 @@ class NewTopic extends Component {
                 <label>Suggest Lunch Topic:</label>
                 <textarea
                   name="newLunchTopic"
-                  value={this.state.value}
                   onChange={this.handleChange}
                   className="form-control"
 
@@ -27,7 +26,6 @@ class NewTopic extends Component {
                 <label>Share Your experience:</label>
                 <textarea
                   name="newEntry"
-                  value={this.state.value}
                   onChange={this.handleChange}
                   placeholder="Your recommendation, high, or low "
                   className="form-control"
@@ -39,7 +37,6 @@ class NewTopic extends Component {
                 <input
                   type="number"
                   name="weekNumber"
-                  value={this.state.value}
                   onChange={this.handleChange}
                   className="form-control"
                 />{" "}
