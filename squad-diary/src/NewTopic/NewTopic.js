@@ -41,9 +41,9 @@ class NewTopic extends Component {
     }
     // to clear out the input form after the user hits submit
     this.setState({
-      newLunchTopic: "",
-      newEntry: "",
-      weekNumber: null
+      newLunchTopic: ""
+      //   newEntry: "",
+      //   weekNumber: null
     });
   }
 
@@ -65,7 +65,7 @@ class NewTopic extends Component {
     }
     // to clear out the input form after the user hits submit
     this.setState({
-      newLunchTopic: "",
+      //   newLunchTopic: "",
       newEntry: "",
       weekNumber: null
     });
