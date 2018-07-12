@@ -37,13 +37,13 @@ class ShowListWeek extends Component {
     let week = this.state.weekEntries.map(entry => {
       if (this.props.admin) {
         return (
-          <div className="container">
-            <div className="row">
+          <div class="container">
+            <div class="row">
               <div className="col-lg-2 col-md-2" />
               <div className="col-lg-8 col-md-8 col-sm-12">
-                <div className="card">
-                  <div className="card-body">
-                    <p className="card-text">{entry.content}</p>
+                <div class="container">
+                  <blockquote class="quote-card">
+                    <p>{entry.content}</p>
                     <button
                       className="btn btn-lg btn-block btn-secondary"
                       onClick={e => {
@@ -62,7 +62,7 @@ class ShowListWeek extends Component {
                     >
                       Delete
                     </button>
-                  </div>
+                  </blockquote>
                 </div>
               </div>
             </div>
@@ -70,14 +70,14 @@ class ShowListWeek extends Component {
         );
       } else {
         return (
-          <div className="container">
-            <div className="row">
+          <div class="container">
+            <div class="row">
               <div className="col-lg-2 col-md-2" />
               <div className="col-lg-8 col-md-8 col-sm-12">
-                <div className="card">
-                  <div className="card-body">
-                    <p className="card-text">{entry.content}</p>
-                  </div>
+                <div class="container">
+                  <blockquote class="quote-card">
+                    <p>{entry.content}</p>
+                  </blockquote>
                 </div>
               </div>
             </div>
