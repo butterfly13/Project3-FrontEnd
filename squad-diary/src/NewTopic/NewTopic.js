@@ -43,8 +43,7 @@ class NewTopic extends Component {
     // to clear out the input form after the user hits submit
     this.setState({
       newLunchTopic: ""
-      //   newEntry: "",
-      //   weekNumber: null
+      
     });
   }
 
