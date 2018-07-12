@@ -27,6 +27,7 @@ class ShowListAll extends Component {
                   <div className="card-body">
                     <p className="card-text">{entry.content}</p>
                     <button
+                      className="btn btn-lg btn-block btn-secondary"
                       onClick={e => {
                         e.preventDefault();
                         axios
