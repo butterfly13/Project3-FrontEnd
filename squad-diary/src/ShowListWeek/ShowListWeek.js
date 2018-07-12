@@ -3,7 +3,7 @@ import axios from "axios";
 
 class ShowListWeek extends Component {
   constructor(props) {
-    super();
+    super(props);
     this.state = {
       weekEntries: []
     };
@@ -20,7 +20,7 @@ class ShowListWeek extends Component {
   };
   getWeek = () => {
     axios
-      .get(`http://localhost:4000/entry/${this.props.match.params.weekNumber}`)
+      .get(`${this.origin}/entry/${this.props.match.params.weekNumber}`)
       .then(results => {
         this.setState({ weekEntries: results.data });
       })
@@ -29,6 +29,11 @@ class ShowListWeek extends Component {
       });
   };
   render() {
+    if (window.location.origin === "http://localhost:3000") {
+      this.origin = "http://localhost:4000";
+    } else {
+      this.origin = "https://boiling-dusk-74498.herokuapp.com";
+    }
     let week = this.state.weekEntries.map(entry => {
       if (this.props.admin) {
         return (
@@ -38,7 +43,7 @@ class ShowListWeek extends Component {
               onClick={e => {
                 e.preventDefault();
                 axios
-                  .delete(`http://localhost:4000/entry/${entry._id}`)
+                  .delete(`${this.origin}/entry/${entry._id}`)
                   .then(() => {
                     this.getWeek();
                     this.redirectToTarget();

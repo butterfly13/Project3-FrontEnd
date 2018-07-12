@@ -5,14 +5,7 @@ class ShowRandom extends Component {
     this.props.getEntries();
   }
   render() {
-    let entries = this.props.entries.map(entry => {
-      return (
-        <div>
-          <h2>Week {entry.weekNumber}</h2>
-          <h3>{entry.content}</h3>
-        </div>
-      );
-    });
+    let entries = this.props.entries.map(entry => entry.content);
 
     return (
       <div>

@@ -15,15 +15,15 @@ class App extends Component {
     this.state = {
       entries: [],
       topic: [],
-      admin: true
+      admin: null
     };
-
     if (window.location.origin === "http://localhost:3000") {
       this.origin = "http://localhost:4000";
     } else {
-      this.origin = "https://murmuring-badlands-90875.herokuapp.com";
+      this.origin = "https://boiling-dusk-74498.herokuapp.com";
     }
   }
+
   onClickAdmin = e => {
     e.preventDefault();
     this.state.admin = true;
@@ -38,16 +38,7 @@ class App extends Component {
         console.log(err);
       });
   };
-  // deleteEntry = () => {
-  //   axios
-  //     .delete(`${this.origin}/entry/${this.state.entries._id}`)
-  //     .then(() => {
-  //       this.getEntries();
-  //     })
-  //     .catch(err => {
-  //       console.log(err);
-  //     });
-  // };
+
   componentDidMount() {
     this.getEntries();
     this.getLunchTopic();

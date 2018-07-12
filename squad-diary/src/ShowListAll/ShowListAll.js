@@ -7,6 +7,11 @@ class ShowListAll extends Component {
     this.props.history.push(`/entry`);
   };
   render() {
+    if (window.location.origin === "http://localhost:3000") {
+      this.origin = "http://localhost:4000";
+    } else {
+      this.origin = "https://boiling-dusk-74498.herokuapp.com";
+    }
     let entries = this.props.entries.map(entry => {
       if (this.props.admin) {
         return (
@@ -19,7 +24,7 @@ class ShowListAll extends Component {
               onClick={e => {
                 e.preventDefault();
                 axios
-                  .delete(`http://localhost:4000/entry/${entry._id}`)
+                  .delete(`${this.origin}/entry/${entry._id}`)
                   .then(() => {
                     this.props.getEntries();
                     this.redirectToTarget();
