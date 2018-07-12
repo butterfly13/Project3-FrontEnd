@@ -79,7 +79,47 @@ class NewTopic extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="container">
+           <h3>Add New Lunch Topic</h3>
+          <form>
+                <div className="form-group">
+                    <label>Suggest Lunch Topic:</label>
+                    <textarea 
+                    name="newLunchTopic"
+                    value={this.state.value}
+                    onChange={this.handleChange}
+                    className="form-control"
+                  />{" "}
+                 
+                </div>
+                <div class="form-group">
+                    <label>Share Your experience:</label>
+                    <textarea
+                        name="newEntry"
+                        value={this.state.value}
+                        onChange={this.handleChange}
+                        placeholder="Your recommendation, high, or low "
+                        className="form-control" 
+                    />{" "}
+
+                </div>
+                <div class="form-group">
+                        <label>WeekNumber:</label>
+                        {/* <input type="number" class="form-control" > */}
+                        <input
+                        type="number"
+                        name="weekNumber"
+                        value={this.state.value}
+                        onChange={this.handleChange}
+                        class="form-control"
+                        />{" "}
+                </div>
+
+
+            </form>
+
+
+        {/* Working content   */}
         <div className="addTopic">
           <h3>Add New Lunch Topic</h3>
           <form onSubmit={this.handleSubmit}>
