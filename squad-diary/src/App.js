@@ -16,7 +16,7 @@ class App extends Component {
     this.state = {
       entries: [],
       topic: [],
-      admin: null
+      admin: true
     };
     if (window.location.origin === "http://localhost:3000") {
       this.origin = "http://localhost:4000";

@@ -16,45 +16,51 @@ class ShowListAll extends Component {
     let entries = this.props.entries.map(entry => {
       if (this.props.admin) {
         return (
-          <li key={entry._id}>
-            <Link to={`/entry/${entry.weekNumber}`}>
-              Week {entry.weekNumber}
-            </Link>
-            <h3>{entry.content}</h3>
-            <button
-              onClick={e => {
-                e.preventDefault();
-                axios
-                  .delete(`${this.origin}/entry/${entry._id}`)
-                  .then(() => {
-                    this.props.getEntries();
-                    this.redirectToTarget();
-                  })
-                  .catch(err => {
-                    console.log(err);
-                  });
-              }}
-              type="submit"
-            >
-              Delete
-            </button>
-          </li>
-        );
-      } else {
-        return (
           <div className="container">
             <div className="row">
-              <div className="col-lg-2 col-md-2">
-              </div>
+              <div className="col-lg-2 col-md-2" />
               <div className="col-lg-8 col-md-8 col-sm-12">
                 <div className="card">
                   <Link to={`/entry/${entry.weekNumber}`}>
                     Week {entry.weekNumber}
                   </Link>
                   <div className="card-body">
-                    <p className="card-text">
-                      {entry.content}
-                    </p>
+                    <p className="card-text">{entry.content}</p>
+                    <button
+                      onClick={e => {
+                        e.preventDefault();
+                        axios
+                          .delete(`${this.origin}/entry/${entry._id}`)
+                          .then(() => {
+                            this.props.getEntries();
+                            this.redirectToTarget();
+                          })
+                          .catch(err => {
+                            console.log(err);
+                          });
+                      }}
+                      type="submit"
+                    >
+                      Delete
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+      } else {
+        return (
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-2 col-md-2" />
+              <div className="col-lg-8 col-md-8 col-sm-12">
+                <div className="card">
+                  <Link to={`/entry/${entry.weekNumber}`}>
+                    Week {entry.weekNumber}
+                  </Link>
+                  <div className="card-body">
+                    <p className="card-text">{entry.content}</p>
                   </div>
                 </div>
               </div>
@@ -73,11 +79,7 @@ class ShowListAll extends Component {
         );
       }
     });
-    return (
-      <div>
-        {entries}
-      </div>
-    );
+    return <div>{entries}</div>;
   }
 }
 
