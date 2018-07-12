@@ -41,18 +41,22 @@ class ShowListAll extends Component {
         );
       } else {
         return (
-          <li>
+          <div className="card">
             <Link to={`/entry/${entry.weekNumber}`}>
               Week {entry.weekNumber}
             </Link>
-            <h3>{entry.content}</h3>
-          </li>
+            <div className="card-body">
+            <p className="card-text">
+            {entry.content}
+            </p>
+          </div>
+        </div>
         );
       }
     });
     return (
       <div>
-        <ul>{entries}</ul>
+        {entries}
       </div>
     );
   }
