@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link, Redirect } from "react-router-dom";
 import axios from "axios";
+import "./ShowListAll.css";
 
 class ShowListAll extends Component {
   redirectToTarget = () => {
@@ -41,7 +42,12 @@ class ShowListAll extends Component {
         );
       } else {
         return (
-          <div className="card">
+          <div className="container">
+          <div className="row">
+           <div className="col-lg-2 col-md-2">
+           </div>
+           <div className="col-lg-8 col-md-8 col-sm-12">
+           <div className="card">
             <Link to={`/entry/${entry.weekNumber}`}>
               Week {entry.weekNumber}
             </Link>
@@ -51,6 +57,19 @@ class ShowListAll extends Component {
             </p>
           </div>
         </div>
+           </div>
+          </div>
+           </div>
+        //   <div className="card">
+        //     <Link to={`/entry/${entry.weekNumber}`}>
+        //       Week {entry.weekNumber}
+        //     </Link>
+        //     <div className="card-body">
+        //     <p className="card-text">
+        //     {entry.content}
+        //     </p>
+        //   </div>
+        // </div>
         );
       }
     });
