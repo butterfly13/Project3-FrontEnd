@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import './NewTopic.css'
+import "./NewTopic.css";
 
 class NewTopic extends Component {
   render() {
@@ -9,7 +9,7 @@ class NewTopic extends Component {
         <h3>Add New Entry and Lunch Topic</h3>
 
         <div className="row">
-          <div className="col-lg-2 col-md-2"></div>
+          <div className="col-lg-2 col-md-2" />
           <div className="col-lg-8 col-md-8 col-sm-12">
             <form onSubmit={this.handleSubmit}>
               <div className="form-group">
@@ -18,9 +18,7 @@ class NewTopic extends Component {
                   name="newLunchTopic"
                   onChange={this.handleChange}
                   className="form-control"
-
                 />{" "}
-
               </div>
               <div className="form-group">
                 <label>Share Your experience:</label>
@@ -30,7 +28,6 @@ class NewTopic extends Component {
                   placeholder="Your recommendation, high, or low "
                   className="form-control"
                 />{" "}
-
               </div>
               <div className="form-group">
                 <label>WeekNumber (1 - 12):</label>
@@ -41,13 +38,12 @@ class NewTopic extends Component {
                   className="form-control"
                 />{" "}
               </div>
-              <button className="btn btn-lg btn-block btn-info">Add Entry / Topic</button>
-
-
+              <button className="btn btn-lg btn-block btn-info">
+                Add Entry / Topic
+              </button>
             </form>
           </div>
         </div>
-
       </div>
     );
   }
