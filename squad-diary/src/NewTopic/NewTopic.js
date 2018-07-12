@@ -13,7 +13,7 @@ class NewTopic extends Component {
     if (window.location.origin === "http://localhost:3000") {
       this.origin = "http://localhost:4000";
     } else {
-      this.origin = "https://murmuring-badlands-90875.herokuapp.com";
+      this.origin = "https://boiling-dusk-74498.herokuapp.com";
     }
 
     this.handleChange = this.handleChange.bind(this);
