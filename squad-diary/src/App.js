@@ -8,6 +8,8 @@ import ShowRandom from "./ShowRandom/ShowRandom";
 import NewTopic from "./NewTopic/NewTopic";
 import axios from "axios";
 import "./App.css";
+import Logo from "./Logo";
+import Background from "./Background";
 
 class App extends Component {
   constructor() {
@@ -15,7 +17,7 @@ class App extends Component {
     this.state = {
       entries: [],
       topic: [],
-      admin: null
+      admin: true
     };
     if (window.location.origin === "http://localhost:3000") {
       this.origin = "http://localhost:4000";
@@ -57,8 +59,10 @@ class App extends Component {
     return (
       <div className="container-fluid">
         <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
-          <Link to="/entry" className="navbar-brand">
+          <Logo />
+          <Link to="/" className="navbar-brand">
             General Assembly
+            <img src="https://generalassemb.ly/"/>
           </Link>
           <button
             className="navbar-toggler"
@@ -74,7 +78,7 @@ class App extends Component {
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ml-auto">
-              <li className="nav-item active">
+              <li className="nav-item">
                 <Link to="/entry" className="nav-link">
                   All <span className="sr-only">(current)</span>
                 </Link>
