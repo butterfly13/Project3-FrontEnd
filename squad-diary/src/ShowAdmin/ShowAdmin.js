@@ -10,14 +10,23 @@ class ShowAdmin extends Component {
   };
   render() {
     return (
-      <div className="row">
-        <div className="col-lg-7 col-md-7 col-sm-12">
-          <input
-            className="btn btn-lg btn-block btn-secondary"
-            onClick={this.onClick}
-            type="button"
-            value="Swear You Are An Admin"
-          />
+      <div class="container">
+        <div class="row">
+          <div className="col-lg-2 col-md-2" />
+          <div className="col-lg-8 col-md-8 col-sm-12">
+            <div class="container">
+              <blockquote class="quote-card">
+                <p>Are you sure you are THE admin?</p>
+                <button
+                  className="btn btn-lg btn-block btn-secondary"
+                  onClick={this.onClick}
+                  type="submit"
+                >
+                  I swear!
+                </button>
+              </blockquote>
+            </div>
+          </div>
         </div>
       </div>
     );
