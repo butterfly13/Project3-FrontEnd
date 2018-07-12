@@ -9,7 +9,6 @@ import NewTopic from "./NewTopic/NewTopic";
 import axios from "axios";
 import "./App.css";
 import Logo from "./Logo";
-import Background from "./Background";
 
 class App extends Component {
   constructor() {
