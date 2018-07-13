@@ -4,13 +4,14 @@ This is a space where students can anonymously share how they're feeling during 
 ## User Stories
 User Stories
 
--As a user I want to be able to make an entry
--As a user i want be to able to see the entries
--As a user i want to be able to filter the entries by week
--As a user i want to be able to see high and lows
+- As a user I want to be able to make an entry
+- As a user i want be to able to see the entries
+- As a user i want to be able to filter the entries by week
+- As a user i want to be able to see high and lows
 
 ## Screenshot
-[URL=http://s50.photobucket.com/user/kansomalik/media/screenshot_zpszsronpde.png.html][IMG]http://i50.photobucket.com/albums/f335/kansomalik/screenshot_zpszsronpde.png[/IMG][/URL]
+
+![Alt text](http://i50.photobucket.com/albums/f335/kansomalik/screenshot_zpszsronpde.png "homepage")
 
 ## Built With
 * React
