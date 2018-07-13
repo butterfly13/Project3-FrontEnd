@@ -161,3 +161,22 @@ a.week:hover {
 .quote-card.yellow-card:after {
   color: #fbc02d;
 }
+.card {
+  margin: 20px;
+  background-color: #a3a3a2;
+  background-color: #343a40d1;
+  -webkit-box-shadow: 0 0 20px 12px #868687;
+  box-shadow: 0 0 20px 12px #868687;
+  -webkit-box-shadow: 0 0 20px 0px #858585;
+  box-shadow: 0 0 20px 0px #858585;
+  color: white;
+  font-weight: bold;
+  font-variant: proportional-width;
+  font-size: 20px;
+  font-family: monospace;
+  text-align: justify;
+  text-indent: 26px;
+  padding: 20px;
+  border-radius: 20px;
+  width: 804px;
+}

@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Logo from "../Logo";
 
 class ShowRandom extends Component {
   componentDidMount() {
@@ -11,22 +12,28 @@ class ShowRandom extends Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col-lg-2 col-md-2" />
           <div className="card">
             <div className="card-header">
-              Welcome to the Squad Diary
+              <h1>Welcome to the Squad Diary</h1>
               <p className="card-text">
                 This is a space where you can find encouragement and motivation,
                 share how you feel at any point during your cohort and realize
-                you are not alone.<br />
+                you are not alone.
+              </p>
+              <p className="card-text">
                 Go ahead and share your experience. The good, the bad and the
-                ugly! <br />
+                ugly!{" "}
+              </p>
+              <p className="card-text">
                 If you have an amazing lunch conversation please share! We would
-                love to know!<br />
+                love to know!
+              </p>
+              <p className="card-text">
                 If you have a particular week in mind head over and see how
-                different/simmilar is your experience!<br />
-                We are so glad you are here! Welcome to GA family!
-                <br />
+                different/similar is your experience!
+              </p>
+              <p className="card-text">
+                We are so glad you are here! Welcome to <Logo /> family!
               </p>
             </div>
           </div>
