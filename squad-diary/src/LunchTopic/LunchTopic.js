@@ -22,10 +22,11 @@ class LunchTopic extends Component {
       //     <div className="col-lg-8 col-md-8 col-sm-12"> </div>
       //   </div>
       // </div>
-      <div class="container">
-        <div class="row">
-          <div className="col-lg-2 col-md-2" />
-          <div className="col-lg-8 col-md-8 col-sm-12">
+      // <div class="container">
+      <div>
+        // <div className="row">
+          {/* <div className="col-lg-1 col-md-2" /> */}
+          <div className="col-lg-12 col-md-12 col-sm-12">
             <div className="container">
               <blockquote className="quote-card">
                 <p>When you need a break have a conversation about:</p>
