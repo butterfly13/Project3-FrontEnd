@@ -1,9 +1,7 @@
 .card {
-<<<<<<< HEAD
     border-radius: 2rem;
 }
-=======
-  position: relative;
+  /* position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16,6 +14,5 @@
   background-color: #f6f8f5;
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
-  border-radius: 0.25rem;
-}
->>>>>>> 60c2938cc77bc9bba45140aace50fa7917c819cf
+  border-radius: 0.25rem; */
+
