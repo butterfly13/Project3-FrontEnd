@@ -77,8 +77,8 @@ class NewTopic extends Component {
   }
   render() {
     return (
-      <div className="container">
-        <h3>Add New Entry and Lunch Topic</h3>
+      <div className="container background">
+        <h3><span>Add New Entry and Lunch Topic</span></h3>
 
         <div className="row">
           <div className="col-lg-2 col-md-2" />
