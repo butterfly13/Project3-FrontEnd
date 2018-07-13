@@ -13,11 +13,9 @@ class ShowRandom extends Component {
         <div className="row">
           <div className="col-lg-2 col-md-2" />
           <div className="col-lg-8 col-md-8 col-sm-12">
-            <div className="card">
-              <div className="card-body">
-                <p className="card-text">{random && random.content}</p>
-              </div>
-            </div>
+            <blockquote class="quote-card">
+              <p>{random && random.content}</p>
+            </blockquote>
           </div>
         </div>
       </div>
