@@ -86,8 +86,10 @@ class ShowListWeek extends Component {
       }
     });
     return (
-      <div>
-        <h1>Week {this.props.match.params.weekNumber}</h1>
+      <div className="container">
+        <h1>
+          This is what people say on week {this.props.match.params.weekNumber}
+        </h1>
         {week}
       </div>
     );

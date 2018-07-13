@@ -29,10 +29,7 @@ class LunchTopic extends Component {
             <div className="container">
               <blockquote className="quote-card">
                 <p>When you need a break have a conversation about:</p>
-                <button
-                  className="btn btn-lg btn-block btn-secondary"
-                  type="submit"
-                >
+                <button className="btn btn-lg btn-block btn-secondary off">
                   {topic}
                 </button>
               </blockquote>
