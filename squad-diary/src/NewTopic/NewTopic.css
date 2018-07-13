@@ -15,18 +15,10 @@ form {
     
 }
 
-/* textarea, input {
-    border-radius: 10%;
-} */
 
 .form-control {
     border-radius: 20px;
 }
-
-/* .background {
-    background-color: blue;
-    opacity: 0.5;
-} */
 
 
 
@@ -40,9 +32,10 @@ label {
 }
 
 h3 span {
- background-color: beige;
+ /* background-color: beige; */
+ background-color:#4e4e4a;
  opacity: 0.7;
- color: black;
+ color: white;
  padding: 10px;
  border-radius: 10px;
  
@@ -50,4 +43,5 @@ h3 span {
 
 h3 {
     padding-bottom: 20px;
+
 }
