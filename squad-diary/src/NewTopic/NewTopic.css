@@ -1,8 +1,8 @@
 
 h3 {
     text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    /* padding-top: 10px;
+    padding-bottom: 10px; */
 }
 
 textarea {
@@ -11,5 +11,43 @@ textarea {
 
 form {
     padding-bottom: 20px;
+   
     
+}
+
+/* textarea, input {
+    border-radius: 10%;
+} */
+
+.form-control {
+    border-radius: 20px;
+}
+
+/* .background {
+    background-color: blue;
+    opacity: 0.5;
+} */
+
+
+
+label {
+    background-color:#6a7075;
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 0.8;
+    color:  whitesmoke;
+    font-weight: bolder;
+}
+
+h3 span {
+ background-color: beige;
+ opacity: 0.7;
+ color: black;
+ padding: 10px;
+ border-radius: 10px;
+ 
+}
+
+h3 {
+    padding-bottom: 20px;
 }

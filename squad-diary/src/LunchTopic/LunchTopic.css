@@ -1,8 +1,11 @@
 h4 {
-    text-align: center;
-    padding-bottom: 15px;
+  text-align: center;
+  padding-bottom: 15px;
 }
 
 .container {
-    padding-bottom: 20px;
+  padding-bottom: 20px;
+}
+.off {
+  pointer-events: none;
 }
