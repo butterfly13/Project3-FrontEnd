@@ -37,11 +37,15 @@ class ShowRandom extends Component {
               </p>
             </div>
           </div>
+          {/* <div className="row"> */}
+          {/* <div className="col-lg-10"> */}
           <blockquote class="quote-card">
             <p>{random && random.content}</p>
           </blockquote>
+          {/* </div> */}
+          {/* </div> */}
         </div>
-      </div>
+      </div> 
     );
   }
 }

@@ -197,3 +197,6 @@ a.week:hover {
   border-radius: 20px;
   width: 1110px;
 }
+.navbar-brand {
+  font-size: 30px;
+}
