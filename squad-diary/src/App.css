@@ -28,6 +28,9 @@ h4 {
   font-weight: 900;
   font-size: 40px;
 }
+.logo {
+  margin: 20px;
+}
 .text {
   font-family: fantasy;
   font-variant: all-petite-caps;
