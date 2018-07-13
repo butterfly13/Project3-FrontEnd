@@ -24,13 +24,13 @@ class LunchTopic extends Component {
       // </div>
       // <div class="container">
       <div>
-         <div className="row">
+        <div className="row">
           {/* <div className="col-lg-1 col-md-2" /> */}
           <div className="col-lg-12 col-md-12 col-sm-12">
             <div className="container">
               <blockquote className="quote-card">
-                <p>When you need a break have a conversation about:</p>
-                <button className="btn btn-lg btn-block btn-secondary off">
+                <h4>When you need a break have a conversation about:</h4>
+                <button className="btn btn-lg btn-block btn-secondary off text">
                   {topic}
                 </button>
               </blockquote>
