@@ -93,7 +93,7 @@ class App extends Component {
 
         <main>
           <Route
-            path="/"
+            path="/entry"
             render={routerParams => {
               return (
                 <LunchTopic

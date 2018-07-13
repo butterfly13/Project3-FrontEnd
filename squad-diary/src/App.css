@@ -14,10 +14,10 @@ h1 span {
   text-align: center;
   font-weight: bold;
   padding: 10px;
-  
 }
 h1 {
   margin-bottom: 50px;
+  text-align: center;
 }
 
 .App-logo {
@@ -167,7 +167,6 @@ a.week:hover {
   color: #fbc02d;
 }
 .card {
-  margin: 20px;
   background-color: #a3a3a2;
   background-color: #343a40d1;
   -webkit-box-shadow: 0 0 20px 12px #868687;
@@ -180,8 +179,7 @@ a.week:hover {
   font-size: 20px;
   font-family: monospace;
   text-align: justify;
-  text-indent: 26px;
   padding: 20px;
   border-radius: 20px;
-  width: 804px;
+  width: 1110px;
 }
