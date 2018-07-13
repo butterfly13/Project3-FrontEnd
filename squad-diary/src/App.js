@@ -16,7 +16,7 @@ class App extends Component {
     this.state = {
       entries: [],
       topic: [],
-      admin: true
+      admin: null
     };
     if (window.location.origin === "http://localhost:3000") {
       this.origin = "http://localhost:4000";
@@ -93,6 +93,18 @@ class App extends Component {
 
         <main>
           <Route
+            path="/"
+            render={routerParams => {
+              return (
+                <LunchTopic
+                  topic={this.state.topic}
+                  getLunchTopic={this.getLunchTopic}
+                  {...routerParams}
+                />
+              );
+            }}
+          />
+          <Route
             path="/entry"
             exact
             render={routerParams => {
@@ -136,18 +148,7 @@ class App extends Component {
             }}
           />
           <Route path="/newEntry" component={NewTopic} />
-          <Route
-            path="/"
-            render={routerParams => {
-              return (
-                <LunchTopic
-                  topic={this.state.topic}
-                  getLunchTopic={this.getLunchTopic}
-                  {...routerParams}
-                />
-              );
-            }}
-          />
+
           <Route
             path="/5b463c0cd3af23f8ef66d953"
             render={routerParams => {
