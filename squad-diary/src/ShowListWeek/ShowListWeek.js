@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 
+
 class ShowListWeek extends Component {
   constructor(props) {
     super(props);
@@ -39,9 +40,9 @@ class ShowListWeek extends Component {
         return (
           <div className="container">
             <div className="row">
-              <div className="col-lg-2 col-md-2" />
-              <div className="col-lg-8 col-md-8 col-sm-12">
-                <div className="container">
+              {/* <div className="col-lg-2 col-md-2" /> */}
+              <div className="col-lg-12 col-md-12 col-sm-12">
+                {/* <div className="container"> */}
                   <blockquote className="quote-card">
                     <p>{entry.content}</p>
                     <button
@@ -63,7 +64,7 @@ class ShowListWeek extends Component {
                       Delete
                     </button>
                   </blockquote>
-                </div>
+                {/* </div> end div container blockquote */}
               </div>
             </div>
           </div>
@@ -71,7 +72,7 @@ class ShowListWeek extends Component {
       } else {
         return (
           <div className="container">
-            <div class="row">
+            <div className="row">
               <div className="col-lg-2 col-md-2" />
               <div className="col-lg-8 col-md-8 col-sm-12">
                 <div className="container">

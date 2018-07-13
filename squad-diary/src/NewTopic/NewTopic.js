@@ -97,7 +97,6 @@ class NewTopic extends Component {
                 <textarea
                   name="newEntry"
                   onChange={this.handleChange}
-                  placeholder="Your recommendation, high, or low "
                   className="form-control"
                 />{" "}
               </div>
