@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './ShowRandom.css'
+import Logo from "../Logo";
 
 class ShowRandom extends Component {
   componentDidMount() {
@@ -12,22 +12,34 @@ class ShowRandom extends Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col-lg-2 col-md-2" />
-          <div className="col-lg-8 col-md-8 col-sm-12">
-            <div className="card">
-              <div className="card-body">
-                <p className="card-text">Welcome to the Squad Diaries Homepage <br /><br />
-                  This is a space where students can anonymously share how they're feeling during their cohort.<br /><br /> Go ahead and click on the add new entry link and head to the form to share your experience. <br />
-                  Also you can share interesting topics you've discussed with your classmates during lunch. <br /><br />If you head over to the main list of submissions, you'll able to click on the "week #" link to see all of the posts for that specific week in the cohort.
-                  <br /><br />
-
-                </p>
-              </div>
+          <div className="card">
+            <div className="card-header">
+              <h1>Welcome to the Squad Diary</h1>
+              <p className="card-text">
+                This is a space where you can find encouragement and motivation,
+                share how you feel at any point during your cohort and realize
+                you are not alone.
+              </p>
+              <p className="card-text">
+                Go ahead and share your experience. The good, the bad and the
+                ugly!{" "}
+              </p>
+              <p className="card-text">
+                If you have an amazing lunch conversation please share! We would
+                love to know!
+              </p>
+              <p className="card-text">
+                If you have a particular week in mind head over and see how
+                different/similar is your experience!
+              </p>
+              <p className="card-text">
+                We are so glad you are here! Welcome to <Logo /> family!
+              </p>
             </div>
-            <blockquote class="quote-card">
-              <p>{random && random.content}</p>
-            </blockquote>
           </div>
+          <blockquote class="quote-card">
+            <p>{random && random.content}</p>
+          </blockquote>
         </div>
       </div>
     );

@@ -24,7 +24,7 @@ class LunchTopic extends Component {
       // </div>
       // <div class="container">
       <div>
-        // <div className="row">
+         <div className="row">
           {/* <div className="col-lg-1 col-md-2" /> */}
           <div className="col-lg-12 col-md-12 col-sm-12">
             <div className="container">
